@@ -10,7 +10,7 @@ const Vision = () => {
       description: 'TO BECOME A QUALITY AND TRUSTED SEAFARER RECRUITMENT AND PLACEMENT SERVICE COMPANY',
     },
     id: {
-      title: 'VIsi Kami',
+      title: 'Visi Kami',
       description: 'MENJADI PERUSAHAAN JASA PEREKRUTAN DAN PENEMPATAN PELAUT YANG BERKUALITAS DAN TERPERCAYA',
     },
   };
