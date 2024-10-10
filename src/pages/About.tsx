@@ -1,5 +1,5 @@
 import { useLanguage } from '../hooks/UseLanguage';
-import AboutImage from '../img/profile.jpeg';
+import AboutImage from '../img/about2.jpg';
 
 const About = () => {
   const { language } = useLanguage();

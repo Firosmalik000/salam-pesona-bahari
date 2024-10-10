@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
-import HeroImage from '../img/hero.jpeg';
-import HeroImage2 from '../img/r1.jpg';
-import HeroImage3 from '../img/r2.jpg';
-import HeroImage4 from '../img/r3.jpg';
-import HeroImage5 from '../img/5.jpeg';
+import HeroImage from '../img/h1.jpg';
+import HeroImage2 from '../img/h2.jpg';
+import HeroImage3 from '../img/h3.jpg';
+
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
 const Hero = () => {
-  const images = [HeroImage, HeroImage2, HeroImage3, HeroImage4, HeroImage5];
+  const images = [HeroImage, HeroImage2, HeroImage3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {

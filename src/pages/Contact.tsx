@@ -3,6 +3,12 @@ import { useLanguage } from '../hooks/UseLanguage';
 
 const Contact = () => {
   const { language } = useLanguage();
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const content = {
     en: {
@@ -46,7 +52,7 @@ const Contact = () => {
               </div>
               <div className="flex justify-center md:justify-start">
                 <FaPhone className="mr-2 text-white" />
-                <p className="text-white">02127092820</p>
+                <p className="text-white">+62-812-9261-4791</p>
               </div>
             </div>
           </div>
@@ -56,10 +62,10 @@ const Contact = () => {
             <div className="max-w-lg flex flex-col gap-y-2 text-white font-playfair mb-6 text-center md:text-left">
               <p className="text-xl font-bold text-white font-playfair mb-6">{content[language].follow}</p>
               <div className="flex gap-x-3 justify-center md:justify-start">
-                <a href="https://www.instagram.com/kevinshipping?igsh=MWJnMXRmMnp3YjBtNw%3D%3D&utm_source=qr" className="hover:scale-110 transition duration-300" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/spb_jkt/?utm_source=ig_web_button_share_sheet" className="hover:scale-110 transition duration-300" target="_blank" rel="noopener noreferrer">
                   <FaInstagram className="text-xl text-pink-600" />
                 </a>
-                <a href="https://www.facebook.com/share/kVMNHwmuRw4iNRLB/?mibextid=LQQJ4d" className="hover:scale-110 transition duration-300" target="_blank" rel="noopener noreferrer">
+                <a href="https://web.facebook.com/people/Drond-Step/100078855115874/?locale=hi_IN&_rdc=1&_rdr" className="hover:scale-110 transition duration-300" target="_blank" rel="noopener noreferrer">
                   <FaFacebook className="text-xl text-blue-500" />
                 </a>
               </div>
@@ -72,10 +78,18 @@ const Contact = () => {
       <div className="w-full flex flex-col md:flex-row md:w-1/3 gap-[50px]">
         <div className="py-8 my-5">
           <p className="text-xl font-semibold font-playfair mb-3 text-center text-white">{content[language].company}</p>
-          <p className="text-m text-center text-white">Home</p>
-          <p className="text-m text-center text-white">Visi</p>
-          <p className="text-m text-center text-white">Misi</p>
-          <p className="text-m text-center text-white">Devisi</p>
+          <p className="text-m text-center text-white" onClick={() => handleScrollTo('about')}>
+            About
+          </p>
+          <p className="text-m text-center text-white" onClick={() => handleScrollTo('vision')}>
+            Visi
+          </p>
+          <p className="text-m text-center text-white" onClick={() => handleScrollTo('mision')}>
+            Misi
+          </p>
+          <p className="text-m text-center text-white" onClick={() => handleScrollTo('devisi')}>
+            Devisi
+          </p>
         </div>
         <div className="py-8 my-5">
           <p className="text-xl font-semibold font-playfair mb-3 text-center md:text-left text-white">{content[language].address}</p>

@@ -32,10 +32,10 @@ const Mision = () => {
   };
 
   return (
-    <section id="mision" className="w-full py-16 px-[100px] bg-gray-100">
+    <section id="mision" className="w-full py-16 md:px-[100px] px-4 bg-gray-100">
       <div className="flex-col   items-center justify-center">
         <div className="flex gap-4 w-full ">
-          <img src={ClientImage} alt="Client" className="w-full h-[650px] object-cover rounded-lg shadow-lg" />
+          <img src={ClientImage} alt="Client" className="w-full h-[650px]  object-cover rounded-lg shadow-lg" />
         </div>{' '}
         <h1 className="text-center text-3xl md:text-4xl font-bold font-playfair mb-8 text-gray-800 mt-5">{content[language].title}</h1>
         <div className="grid grid-cols-1 md:grid-cols-3  gap-8 w-full ">

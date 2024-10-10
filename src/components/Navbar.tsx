@@ -95,41 +95,41 @@ const Navbar = () => {
         </button>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-blue-700 text-white flex flex-col items-center justify-center pt-16">
-          <div className="absolute top-4 right-4 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-            <FaTimes size={30} />
+      <div
+        className={`lg:hidden fixed inset-0 bg-gray-800 bg-opacity-90 text-white flex flex-col items-center justify-center pt-16 transition-all duration-300 ease-in-out transform ${
+          isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+        } pointer-events-auto`}
+      >
+        <div className="absolute top-4 right-4 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+          <FaTimes size={30} />
+        </div>
+        <div className="flex flex-col gap-y-4 text-xl">
+          <div onClick={() => handleScrollTo('about')} className="cursor-pointer text-center">
+            {texts[language].aboutUs}
           </div>
-          <div className="flex flex-col gap-y-4 text-xl">
-            <div onClick={() => handleScrollTo('about')} className="cursor-pointer text-center">
-              {texts[language].aboutUs}
-            </div>
-            <div onClick={() => handleScrollTo('vision')} className="cursor-pointer text-center">
-              {texts[language].vision}
-            </div>
-            <div onClick={() => handleScrollTo('mision')} className="cursor-pointer text-center">
-              {texts[language].mission}
-            </div>
-            <div onClick={() => handleScrollTo('service')} className="cursor-pointer text-center">
-              {texts[language].service}
-            </div>
-            <div onClick={() => handleScrollTo('whyus')} className="cursor-pointer text-center">
-              {texts[language].whyus}
-            </div>
-            <div onClick={() => handleScrollTo('contact')} className="cursor-pointer text-center">
-              {texts[language].contactUs}
-            </div>
+          <div onClick={() => handleScrollTo('vision')} className="cursor-pointer text-center">
+            {texts[language].vision}
           </div>
-          <div className="flex gap-x-4 mt-4">
-            <button className={`px-4 py-2 rounded-lg ${language === 'en' ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('en')}>
-              English
-            </button>
-            <button className={`px-4 py-2 rounded-lg ${language === 'id' ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('id')}>
-              Indonesia
-            </button>
+          <div onClick={() => handleScrollTo('mision')} className="cursor-pointer text-center">
+            {texts[language].mission}
+          </div>
+          <div onClick={() => handleScrollTo('service')} className="cursor-pointer text-center">
+            {texts[language].service}
+          </div>
+          <div onClick={() => handleScrollTo('whyus')} className="cursor-pointer text-center">
+            {texts[language].whyus}
+          </div>
+          <div onClick={() => handleScrollTo('contact')} className="cursor-pointer text-center">
+            {texts[language].contactUs}
           </div>
         </div>
-      )}
+        <div className="lg:hidden items-center gap-x-4 mt-4">
+          <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+            <option value="en">English</option>
+            <option value="id">Indonesia</option>
+          </select>
+        </div>
+      </div>
     </div>
   );
 };

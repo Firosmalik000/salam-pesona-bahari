@@ -1,5 +1,5 @@
 import { useLanguage } from '../hooks/UseLanguage';
-import VisionImg from '../img/visi.jpeg';
+import VisionImg from '../img/about.jpg';
 
 const Vision = () => {
   const { language } = useLanguage();
