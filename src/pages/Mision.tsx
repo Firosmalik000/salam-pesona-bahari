@@ -37,7 +37,7 @@ const Mision = () => {
         <div className="flex gap-4 w-full ">
           <img src={ClientImage} alt="Client" className="w-full h-[650px] object-cover rounded-lg shadow-lg" />
         </div>{' '}
-        <h1 className="text-center text-3xl md:text-4xl font-bold font-playfair mb-8 text-gray-800">{content[language].title}</h1>
+        <h1 className="text-center text-3xl md:text-4xl font-bold font-playfair mb-8 text-gray-800 mt-5">{content[language].title}</h1>
         <div className="grid grid-cols-1 md:grid-cols-3  gap-8 w-full ">
           <div className={classMission}>
             <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">01</p>

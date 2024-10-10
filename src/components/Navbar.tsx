@@ -3,7 +3,7 @@ import LogoImage from '../img/logonav.png';
 import { useLanguage } from '../hooks/UseLanguage';
 import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
-
+type LanguageType = 'en' | 'id';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for controlling menu visibility
@@ -24,16 +24,16 @@ const Navbar = () => {
       vision: 'Vision',
       mission: 'Mission',
       service: 'Service',
-      whyus: 'Why us',
+      whyus: 'Why Us',
       contactUs: 'Contact Us',
     },
     id: {
-      aboutUs: '关于我们',
-      vision: '愿景',
-      mission: '使命',
-      service: '服务',
-      whyus: '车队',
-      contactUs: '联系我们',
+      aboutUs: 'Tentang Kami',
+      vision: 'Visi',
+      mission: 'Misi',
+      service: 'Layanan',
+      whyus: 'Mengapa Kami',
+      contactUs: 'Hubungi Kami',
     },
   };
 
@@ -54,7 +54,13 @@ const Navbar = () => {
           <p className="text-2xl md:text-3xl font-bold font-sans">Salam Pesona Bahari</p>
         </div>
 
-        <div className="hidden lg:flex items-center gap-x-6">
+        <div className="hidden lg:flex items-center gap-x-4">
+          <div className="items-center gap-x-4">
+            <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+              <option value="en">English</option>
+              <option value="id">Indonesia</option>
+            </select>
+          </div>
           <div onClick={() => handleScrollTo('about')} className={classOptionNav}>
             {texts[language].aboutUs}
           </div>
@@ -75,14 +81,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-x-4">
+        {/* <div className="hidden lg:flex items-center gap-x-4">
           <button className={`px-4 py-2 rounded-lg ${language === 'en' ? 'bg-blue-300 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('en')}>
             English
           </button>
           <button className={`px-4 py-2 rounded-lg ${language === 'id' ? 'bg-blue-300 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('id')}>
-            中文
+            Indonesia
           </button>
-        </div>
+        </div> */}
 
         <button className="lg:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <FaTimes /> : <IoMenuSharp size={30} />}
@@ -119,7 +125,7 @@ const Navbar = () => {
               English
             </button>
             <button className={`px-4 py-2 rounded-lg ${language === 'id' ? 'bg-blue-800 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('id')}>
-              中文
+              Indonesia
             </button>
           </div>
         </div>

@@ -12,7 +12,7 @@ const Contact = () => {
       phone: 'Phone:',
       fax: 'Fax:',
       email: 'Email:',
-      subtitle: 'Caring and Safety Shipping Partner',
+
       follow: 'Follow Us',
     },
     id: {
@@ -22,7 +22,7 @@ const Contact = () => {
       phone: 'Telepon:',
       fax: 'Faks:',
       email: 'Email:',
-      subtitle: 'Mitra Pengiriman yang Peduli dan Aman',
+
       follow: 'Ikuti Kami',
     },
   };
@@ -33,7 +33,6 @@ const Contact = () => {
         {/* Header Section */}
         <div className="py-8 border-b-2 my-5">
           <p className="text-white text-xl text-center md:text-left font-semibold font-playfair mb-3">PT Salam Pesona Bahari</p>
-          <p className="text-center md:text-left text-white">{content[language].subtitle}</p>
         </div>
 
         {/* Contact Information Section */}
