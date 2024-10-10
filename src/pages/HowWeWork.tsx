@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaClipboardCheck, FaUserCheck, FaPlaneDeparture } from 'react-icons/fa';
 
 const HowWeWork = () => {
