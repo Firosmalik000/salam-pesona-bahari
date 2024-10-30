@@ -1,5 +1,5 @@
 import { useLanguage } from '../hooks/UseLanguage';
-import VisionImg from '../img/about.jpg';
+import VisionImg from '../img/KAPAL_POLE_AND_LINE.jpg';
 
 const Vision = () => {
   const { language } = useLanguage();
