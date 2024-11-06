@@ -22,7 +22,7 @@ const About = () => {
           <h1 className="text-white text-4xl font-bold mb-6 text-center font-playfair">{content[language].title}</h1>
           <p className="text-white mb-4 indent-8 text-xl text-justify">{content[language].description}</p>
         </div>
-        <img src={AboutImage} alt="About PT Salam Pesona Bahari" className="md:w-[550px] w-[500px] md:h-[550px] h-auto object-cover rounded-xl shadow-lg" />
+        <img src={AboutImage} alt="About PT Salam Pesona Bahari" className="md:w-[400px] w-[500px] md:h-[550px] h-auto object-cover rounded-xl shadow-lg" />
       </div>
     </section>
   );
