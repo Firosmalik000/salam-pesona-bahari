@@ -20,7 +20,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center gap-x-3">
         <div className="w-[450px] border-white p-8">
           <h1 className="text-white text-4xl font-bold mb-6 text-center font-playfair">{content[language].title}</h1>
-          <p className="text-white mb-4 indent-8 text-xl text-justify">{content[language].description}</p>
+          <p className="text-white mb-4 indent-8 text-lg md:text-xl text-justify">{content[language].description}</p>
         </div>
         <img src={AboutImage} alt="About PT Salam Pesona Bahari" className="md:w-[400px] w-[500px] md:h-[550px] h-auto object-cover rounded-xl shadow-lg" />
       </div>
