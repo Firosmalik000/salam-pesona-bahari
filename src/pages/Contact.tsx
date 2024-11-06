@@ -93,7 +93,7 @@ const Contact = () => {
         </div>
         <div className="py-8 my-5">
           <p className="text-xl font-semibold font-playfair mb-3 text-center md:text-left text-white">{content[language].address}</p>
-          <p className="text-m text-center md:text-left text-white">Maspion Olaza LT.2 No 2C Kota Jakarta Utara</p>
+          <p className="text-m text-center md:text-left text-white">Maspion Plaza LT.2 No 2C Kota Jakarta Utara</p>
         </div>
         {/* Uncomment the following section to include the map */}
         {/* <div className="w-full md:w-[500px] md:h-[300px] h-[300px] rounded-xl overflow-hidden">
