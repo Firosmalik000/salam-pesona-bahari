@@ -3,10 +3,12 @@ import LogoImage from '../img/logonav.png';
 import { useLanguage } from '../hooks/UseLanguage';
 import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
+import { motion } from 'framer-motion';
+
 type LanguageType = 'en' | 'id';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for controlling menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
@@ -47,7 +49,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-white shadow-lg text-black' : 'bg-[#1E3E62] bg-opacity-70 text-white'}`}>
+    <motion.div
+      initial={{ y: -100 }}
+      animate={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
+      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-white shadow-lg text-black' : 'bg-[#1E3E62] bg-opacity-70 text-white'}`}
+    >
       <div className="container mx-auto flex items-center justify-between h-[90px] px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <img src={LogoImage} className="w-12 md:w-16" alt="Logo" />
@@ -80,15 +86,6 @@ const Navbar = () => {
             {texts[language].contactUs}
           </div>
         </div>
-
-        {/* <div className="hidden lg:flex items-center gap-x-4">
-          <button className={`px-4 py-2 rounded-lg ${language === 'en' ? 'bg-blue-300 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('en')}>
-            English
-          </button>
-          <button className={`px-4 py-2 rounded-lg ${language === 'id' ? 'bg-blue-300 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => setLanguage('id')}>
-            Indonesia
-          </button>
-        </div> */}
 
         <button className="lg:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <FaTimes /> : <IoMenuSharp size={30} />}
@@ -130,7 +127,7 @@ const Navbar = () => {
           </select>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { FaBriefcase, FaGavel, FaHandshake, FaUsers } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
+import { motion } from 'framer-motion';
 
 const Service = () => {
   const { language } = useLanguage();
@@ -61,11 +62,18 @@ const Service = () => {
       {/* Service Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {companyHighlights[language].map((highlight, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-110 transition duration-300">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-110 transition duration-300"
+          >
             <div className="flex justify-center mb-4">{highlight.icon}</div>
             <h2 className="text-2xl font-semibold text-gray-800 mb-2 font-playfair">{highlight.title}</h2>
             <p className="text-gray-600">{highlight.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

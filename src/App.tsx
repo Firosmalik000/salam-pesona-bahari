@@ -5,6 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import WhyUs from './pages/WhyUs';
 import HowWeWork from './pages/HowWeWork';
 import Devisi from './pages/Devisi';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
@@ -20,9 +21,15 @@ function App() {
       <Devisi />
       <Contact />
       <Footer />
-      <a href="https://wa.me/+6281292614791" className="fixed bottom-5 w-[50px] h-[50px]  right-5 rounded-full bg-green-500 flex items-center justify-center z-[500]">
-        <FaWhatsapp className="w-10 h-10 text-white" />
-      </a>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}>
+        <a
+          href="https://wa.me/+6281292614791"
+          className="fixed bottom-5 right-5 w-[50px] h-[50px] rounded-full bg-green-500 flex items-center justify-center z-[500] hover:scale-110 transition-transform duration-300"
+          aria-label="Chat on WhatsApp"
+        >
+          <FaWhatsapp className="w-8 h-8 text-white" />
+        </a>
+      </motion.div>
     </div>
   );
 }

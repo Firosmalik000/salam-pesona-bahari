@@ -1,10 +1,11 @@
 import { useLanguage } from '../hooks/UseLanguage';
 import ClientImage from '../img/client.jpg';
+import { motion } from 'framer-motion';
 
 const Mision = () => {
   const { language } = useLanguage();
 
-  const classMission = 'relative flex flex-col justify-center items-center text-center text-lg md:text-xl w-full max-w-[350px] md:max-w-[500px] p-6 z-10 bg-white rounded-lg shadow-md md:mx-0 mx-auto';
+  const classMission = 'relative flex flex-col justify-center items-center text-center text-lg md:text-xl w-full max-w-[350px] md:max-w-[500px] p-6 z-10 bg-white rounded-lg shadow-md mx-auto';
 
   const content = {
     en: {
@@ -33,42 +34,17 @@ const Mision = () => {
 
   return (
     <section id="mision" className="w-full py-16 md:px-[100px] px-4 bg-gray-100">
-      <div className="flex-col   items-center justify-center">
-        <div className="flex gap-4 w-full ">
-          <img src={ClientImage} alt="Client" className="w-full h-[650px]  object-cover rounded-lg shadow-lg" />
-        </div>{' '}
+      <div className="flex flex-col items-center">
+        <img src={ClientImage} alt="Client" className="w-full h-[650px] object-cover rounded-lg shadow-lg" />
         <h1 className="text-center text-3xl md:text-4xl font-bold font-playfair mb-8 text-gray-800 mt-5">{content[language].title}</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-8 w-full ">
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">01</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[0]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-orange-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">02</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[1]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">03</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[2]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">04</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[3]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">05</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[4]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
-          <div className={classMission}>
-            <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">06</p>
-            <p className="relative z-10 ml-2 mt-5">{content[language].descriptions[5]}</p>
-            <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          {content[language].descriptions.map((desc, index) => (
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }} key={index} className={classMission}>
+              <p className="text-4xl md:text-5xl font-bold absolute top-0 left-0 text-gray-700">{String(index + 1).padStart(2, '0')}</p>
+              <p className="relative z-10 ml-2 mt-5">{desc}</p>
+              <div className="w-1/2 md:w-3/4 h-24 md:h-32 bg-blue-300 absolute right-0 top-5 rounded-lg shadow-lg z-[-1]" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

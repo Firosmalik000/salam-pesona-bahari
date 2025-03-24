@@ -7,11 +7,11 @@ const About = () => {
   const content = {
     en: {
       title: 'About Us',
-      description: `PT. Salam Pesona Bahari is an Indonesian Migrant Worker Placement Company. Currently, PT Salam Pesona Bahari is located in Jakarta and has a branch in the Cirebon area. For decades, PT Salam Pesona Bahari has sent thousands of workers abroad through a fast, safe, and reliable process. We are committed to creating professional workers in compliance with applicable laws and regulations.`,
+      description: `PT. Salam Pesona Bahari is a labor placement agency for Fishing, Cargo, and Tanker vessels in various locations. We are committed to helping workers find jobs that match their abilities. PT. Salam Pesona Bahari is headquartered in North Jakarta City, but also has a branch in Cirebon. We have sent thousands of workers abroad for years through a fast, safe, and reliable process. We are committed to creating professional workers in accordance with applicable laws and regulations.`,
     },
     id: {
       title: 'Tentang Kami',
-      description: `PT. Salam Pesona Bahari adalah Perusahaan Penempatan Pekerja Migran Indonesia. Saat ini, PT Salam Pesona Bahari berlokasi di Jakarta dan memiliki cabang di daerah Cirebon. Selama puluhan tahun, PT Salam Pesona Bahari telah mengirimkan ribuan pekerja ke luar negeri melalui proses yang cepat, aman, dan dapat diandalkan. Kami berkomitmen untuk menciptakan pekerja profesional sesuai dengan hukum dan peraturan yang berlaku.`,
+      description: `PT. Salam Pesona Bahari adalah agen penempatan tenaga kerja kapal Ikan, Kargo, dan Tanker di berbagai lokasi. Kami berkomitmen untuk membantu pekerja menemukan perkerjaan yang sesuai dengan kemampuan mereka. PT. Salam Pesona Bahari memiliki kantor pusat di Kota Jakarta Utara, tetapi juga memiliki cabang di Cirebon. Kami telah mengirimkan ribuan pekerja ke luar negeri selama bertahun tahun melalui proses yang cepat, aman, dan dapat diandalkan. Kami berkomitmen untuk menciptakan pekerja profesional sesuai dengan hukum dan peraturan yang berlaku.`,
     },
   };
 

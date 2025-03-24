@@ -1,5 +1,6 @@
 import { FaClipboardCheck, FaUserCheck, FaPlaneDeparture } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
+import { motion } from 'framer-motion';
 
 const HowWeWork = () => {
   const { language } = useLanguage();
@@ -48,13 +49,20 @@ const HowWeWork = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
           {content[language].steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
+              key={index}
+              className="flex flex-col items-center"
+            >
               {index === 0 && <FaClipboardCheck className="text-6xl text-green-500 mb-2" />}
               {index === 1 && <FaUserCheck className="text-6xl text-yellow-500 mb-2" />}
               {index === 2 && <FaPlaneDeparture className="text-6xl text-blue-500 mb-2" />}
               <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
