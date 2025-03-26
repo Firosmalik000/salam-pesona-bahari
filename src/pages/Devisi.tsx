@@ -5,6 +5,9 @@ import kapal3 from '../img/slide5.jpg';
 import kapal4 from '../img/KAPAL_PURSE_SEINE.png';
 import kapal5 from '../img/KAPAL_TRAWL.png';
 import kapal6 from '../img/slide3.jpg';
+import kargo from '../img/kargo.jpg';
+import lepasPantai from '../img/lepasPantai.JPG';
+import tanker from '../img/tanker.jpeg';
 import { motion } from 'framer-motion';
 
 const Devisi = () => {
@@ -38,23 +41,23 @@ const Devisi = () => {
     id: {
       title: 'Kapal Niaga',
       kapalList: [
-        { name: 'KAPAL TANKER', img: kapal3 },
-        { name: 'KAPAL KARGO', img: kapal6 },
-        { name: 'KAPAL LEPAS PANTAI', img: kapal2 },
+        { name: 'KAPAL TANKER', img: tanker },
+        { name: 'KAPAL KARGO', img: kargo },
+        { name: 'KAPAL LEPAS PANTAI', img: lepasPantai },
       ],
     },
     en: {
       title: 'Merchant Ship',
       kapalList: [
-        { name: 'TANKER', img: kapal3 },
-        { name: 'CARGO SHIP', img: kapal6 },
-        { name: 'OFFSHORE SHIP', img: kapal2 },
+        { name: 'TANKER', img: tanker },
+        { name: 'CARGO SHIP', img: kargo },
+        { name: 'OFFSHORE SHIP', img: lepasPantai },
       ],
     },
   };
 
   return (
-    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 bg-gray-50 mx-auto flex flex-col gap-y-4">
+    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 bg-gray-50 mx-auto flex flex-col gap-y-8">
       <div>
         <h2 className="text-3xl font-bold text-center mb-12">{content[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
