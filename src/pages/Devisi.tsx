@@ -57,8 +57,8 @@ const Devisi = () => {
   };
 
   return (
-    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 bg-gray-50 mx-auto flex flex-col gap-y-[100px]">
-      <div>
+    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 bg-gray-50 mx-auto flex flex-col gap-y-[300px]">
+      <div className="mb-4">
         <h2 className="text-3xl font-bold text-center mb-12">{content[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {content[language].kapalList.map((item, index) => (
