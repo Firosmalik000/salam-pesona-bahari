@@ -6,7 +6,7 @@ import kapal4 from '../img/KAPAL_PURSE_SEINE.png';
 import kapal5 from '../img/KAPAL_TRAWL.png';
 import kapal6 from '../img/slide3.jpg';
 import kargo from '../img/kargo.jpg';
-import lepasPantai from '../img/lepasPantai.JPG';
+import lepasPantai from '../img/lepas.jpg';
 import tanker from '../img/tanker.jpeg';
 import { motion } from 'framer-motion';
 
