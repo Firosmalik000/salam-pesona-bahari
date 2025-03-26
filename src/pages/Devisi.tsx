@@ -37,6 +37,7 @@ const Devisi = () => {
       ],
     },
   };
+
   const content2 = {
     id: {
       title: 'Kapal Niaga',
@@ -57,24 +58,47 @@ const Devisi = () => {
   };
 
   return (
-    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 bg-gray-50 mx-auto flex flex-col gap-y-[300px]">
-      <div className="mb-4">
+    <section id="devisi" className="w-full max-w-screen-lg px-8 py-16 mx-auto flex flex-col space-y-24">
+      <div>
         <h2 className="text-3xl font-bold text-center mb-12">{content[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {content[language].kapalList.map((item, index) => (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }} key={index} className="text-center">
-              <img src={item.img} alt={item.name} className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
+              key={index}
+              className="text-center"
+            >
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105"
+              />
               <h3 className="text-xl font-semibold">{item.name}</h3>
             </motion.div>
           ))}
         </div>
       </div>
+
       <div>
         <h2 className="text-3xl font-bold text-center mb-12">{content2[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {content2[language].kapalList.map((item, index) => (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }} key={index} className="text-center">
-              <img src={item.img} alt={item.name} className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
+              key={index}
+              className="text-center"
+            >
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105"
+              />
               <h3 className="text-xl font-semibold">{item.name}</h3>
             </motion.div>
           ))}
