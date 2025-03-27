@@ -16,15 +16,15 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="w-full bg-[#1e4172] py-16 md:px-[200px] px-[60px]">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center gap-x-3">
-        <div className="w-[450px] border-white p-8">
-          <h1 className="text-white text-4xl font-bold mb-6 text-center font-playfair">{content[language].title}</h1>
-          <p className="text-white mb-4 indent-8 text-lg md:text-xl text-justify">{content[language].description}</p>
-        </div>
-        <img src={AboutImage} alt="About PT Salam Pesona Bahari" className="md:w-[400px] w-[500px] md:h-[400px] h-auto object-cover rounded-xl shadow-lg" />
-      </div>
-    </section>
+		<section id="about" className="w-full bg-[#1e4172] py-16 px-6 md:px-20 lg:px-[200px]">
+			<div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+				<div className="max-w-lg border-white p-6 md:p-8">
+					<h1 className="text-white text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center font-playfair">{content[language].title}</h1>
+					<p className="text-white text-base md:text-lg indent-8 text-justify">{content[language].description}</p>
+				</div>
+				<img src={AboutImage} alt="About PT Salam Pesona Bahari" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover rounded-xl shadow-lg" />
+			</div>
+		</section>
   );
 };
 
