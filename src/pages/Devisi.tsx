@@ -8,6 +8,7 @@ import kapal6 from '../img/slide3.jpg';
 import kargo from '../img/kargo.jpg';
 import lepasPantai from '../img/lepas.jpg';
 import tanker from '../img/tanker.jpeg';
+import kontainer from '../img/kontainer.jpg';
 import { motion } from 'framer-motion';
 
 const Devisi = () => {
@@ -44,6 +45,7 @@ const Devisi = () => {
       kapalList: [
         { name: 'KAPAL TANKER', img: tanker },
         { name: 'KAPAL KARGO', img: kargo },
+        { name: 'KAPAL KONTAINER', img: kontainer },
         { name: 'KAPAL LEPAS PANTAI', img: lepasPantai },
       ],
     },
@@ -52,6 +54,7 @@ const Devisi = () => {
       kapalList: [
         { name: 'TANKER', img: tanker },
         { name: 'CARGO SHIP', img: kargo },
+        { name: 'CONTAINER SHIP', img: kontainer },
         { name: 'OFFSHORE SHIP', img: lepasPantai },
       ],
     },
@@ -63,19 +66,8 @@ const Devisi = () => {
         <h2 className="text-3xl font-bold text-center mb-12">{content[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {content[language].kapalList.map((item, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
-              key={index}
-              className="text-center"
-            >
-              <img
-                src={item.img}
-                alt={item.name}
-                className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105"
-              />
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }} key={index} className="text-center">
+              <img src={item.img} alt={item.name} className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105" />
               <h3 className="text-xl font-semibold">{item.name}</h3>
             </motion.div>
           ))}
@@ -86,19 +78,8 @@ const Devisi = () => {
         <h2 className="text-3xl font-bold text-center mb-12">{content2[language].title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {content2[language].kapalList.map((item, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
-              key={index}
-              className="text-center"
-            >
-              <img
-                src={item.img}
-                alt={item.name}
-                className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105"
-              />
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }} key={index} className="text-center">
+              <img src={item.img} alt={item.name} className="w-[400px] h-[250px] object-cover mb-4 rounded-lg transition-transform duration-300 hover:scale-105" />
               <h3 className="text-xl font-semibold">{item.name}</h3>
             </motion.div>
           ))}
