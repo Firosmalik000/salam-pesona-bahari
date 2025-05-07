@@ -38,7 +38,7 @@ const Devisi = () => {
       ],
     },
     zh: {
-      title: '船只类型',
+      title: '渔船科',
       kapalList: [
         { name: '延绳钓船', img: kapal3 },
         { name: '鱿鱼船', img: kapal6 },
@@ -70,7 +70,7 @@ const Devisi = () => {
       ],
     },
     zh: {
-      title: '商船',
+      title: '商船部门',
       kapalList: [
         { name: '油轮', img: tanker },
         { name: '货船', img: kargo },
