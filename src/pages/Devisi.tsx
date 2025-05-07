@@ -16,7 +16,7 @@ const Devisi = () => {
 
   const content = {
     id: {
-      title: 'Jenis Kapal',
+      title: 'Divisi Kapal Penangkapan Ikan',
       kapalList: [
         { name: 'KAPAL LONG LINE', img: kapal3 },
         { name: 'KAPAL CUMI', img: kapal6 },
@@ -27,7 +27,7 @@ const Devisi = () => {
       ],
     },
     en: {
-      title: 'Ship Types',
+      title: 'Fishing Vessel Division',
       kapalList: [
         { name: 'LONG LINE SHIP', img: kapal3 },
         { name: 'SQUID SHIP', img: kapal6 },
@@ -41,7 +41,7 @@ const Devisi = () => {
 
   const content2 = {
     id: {
-      title: 'Kapal Niaga',
+      title: 'Devisi Kapal Niaga',
       kapalList: [
         { name: 'KAPAL TANKER', img: tanker },
         { name: 'KAPAL KARGO', img: kargo },
@@ -50,7 +50,7 @@ const Devisi = () => {
       ],
     },
     en: {
-      title: 'Merchant Ship',
+      title: 'Merchant Ship Division',
       kapalList: [
         { name: 'TANKER', img: tanker },
         { name: 'CARGO SHIP', img: kargo },
