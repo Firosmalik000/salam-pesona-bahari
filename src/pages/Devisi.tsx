@@ -37,6 +37,17 @@ const Devisi = () => {
         { name: 'TRAWL SHIP', img: kapal5 },
       ],
     },
+    zh: {
+      title: '船只类型',
+      kapalList: [
+        { name: '延绳钓船', img: kapal3 },
+        { name: '鱿鱼船', img: kapal6 },
+        { name: '螃蟹船', img: kapal2 },
+        { name: '围网船', img: kapal4 },
+        { name: 'Cantrang 船', img: kapal1 },
+        { name: '拖网船', img: kapal5 },
+      ],
+    },
   };
 
   const content2 = {
@@ -56,6 +67,15 @@ const Devisi = () => {
         { name: 'CARGO SHIP', img: kargo },
         { name: 'CONTAINER SHIP', img: kontainer },
         { name: 'OFFSHORE SHIP', img: lepasPantai },
+      ],
+    },
+    zh: {
+      title: '商船',
+      kapalList: [
+        { name: '油轮', img: tanker },
+        { name: '货船', img: kargo },
+        { name: '集装箱船', img: kontainer },
+        { name: '海上船只', img: lepasPantai },
       ],
     },
   };

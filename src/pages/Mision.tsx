@@ -30,6 +30,17 @@ const Mision = () => {
         'Memberikan kesempatan kerja yang sama bagi semua pelaut Indonesia.',
       ],
     },
+    zh: {
+      title: '我们的使命',
+      descriptions: [
+        '实施质量管理体系，并为每一位受雇的印尼海员作出积极贡献。',
+        '专注于满足我们海员的核心能力要求。',
+        '发展和保护利益，同时为客户提供最佳服务。',
+        '实现预期的利润目标。',
+        '为员工维持一个安全、舒适和令人满意的工作环境。',
+        '为所有印尼海员提供平等的就业机会。',
+      ],
+    },
   };
 
   return (

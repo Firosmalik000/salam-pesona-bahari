@@ -18,7 +18,6 @@ const Contact = () => {
       phone: 'Phone:',
       fax: 'Fax:',
       email: 'Email:',
-
       follow: 'Follow Us',
     },
     id: {
@@ -28,8 +27,16 @@ const Contact = () => {
       phone: 'Telepon:',
       fax: 'Faks:',
       email: 'Email:',
-
       follow: 'Ikuti Kami',
+    },
+    zh: {
+      title: '联系我们',
+      address: '地址',
+      company: '公司',
+      phone: '电话：',
+      fax: '传真：',
+      email: '电子邮件：',
+      follow: '关注我们',
     },
   };
 

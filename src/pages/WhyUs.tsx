@@ -25,6 +25,10 @@ const WhyUs = () => {
         'Selalu berusaha mencari solusi terbaik jika terjadi masalah dengan kru di kapal',
       ],
     },
+    zh: {
+      title: '为什么您应该与我们合作',
+      points: ['拥有多年的经验', '可靠且容易联系', '努力寻找愿意吃苦耐劳的船员', '从不占船员的便宜', '如船上船员出现问题，总是尽力寻找最佳解决方案'],
+    },
   };
 
   return (

@@ -1,14 +1,17 @@
 import React, { createContext, useState, ReactNode, useEffect } from 'react';
 
 interface LanguageContextType {
-  language: 'en' | 'id';
-  setLanguage: (language: 'en' | 'id') => void;
+  language: 'en' | 'id' | 'zh';
+  setLanguage: (language: 'en' | 'id' | 'zh') => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<'en' | 'id'>(() => (localStorage.getItem('language') as 'en' | 'id') || 'en');
+  const [language, setLanguage] = useState<'en' | 'id' | 'zh'>(() => {
+    const storedLanguage = localStorage.getItem('language');
+    return (storedLanguage as 'en' | 'id' | 'zh') || 'en';
+  });
 
   useEffect(() => {
     localStorage.setItem('language', language);

@@ -37,6 +37,14 @@ const Navbar = () => {
       whyus: 'Mengapa Kami',
       contactUs: 'Hubungi Kami',
     },
+    zh: {
+      aboutUs: '关于我们',
+      vision: '愿景',
+      mission: '使命',
+      service: '服务',
+      whyus: '为什么选择我们',
+      contactUs: '联系我们',
+    },
   };
 
   const classOptionNav = 'cursor-pointer font-semibold';
@@ -65,6 +73,7 @@ const Navbar = () => {
             <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
               <option value="en">English</option>
               <option value="id">Indonesia</option>
+              <option value="zh">中文</option>
             </select>
           </div>
           <div onClick={() => handleScrollTo('about')} className={classOptionNav}>
@@ -124,6 +133,7 @@ const Navbar = () => {
           <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-3 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
             <option value="en">English</option>
             <option value="id">Indonesia</option>
+            <option value="zh">中文</option>
           </select>
         </div>
       </div>

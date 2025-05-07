@@ -50,6 +50,28 @@ const Service = () => {
         icon: <FaUsers className="text-4xl text-red-500 mb-4" />,
       },
     ],
+    zh: [
+      {
+        title: '经验丰富',
+        description: '我们公司已成功派遣了数千名工人。',
+        icon: <FaBriefcase className="text-4xl text-blue-500 mb-4" />,
+      },
+      {
+        title: '合法注册',
+        description: '我们公司具有合法注册的法人资格。',
+        icon: <FaGavel className="text-4xl text-green-500 mb-4" />,
+      },
+      {
+        title: '致力奉献',
+        description: '自2000年成立以来，我们致力于帮助印尼劳工实现更美好的未来。',
+        icon: <FaHandshake className="text-4xl text-yellow-500 mb-4" />,
+      },
+      {
+        title: '专业精神',
+        description: '我们根据专业合作伙伴设定的标准提供合格的劳动力。',
+        icon: <FaUsers className="text-4xl text-red-500 mb-4" />,
+      },
+    ],
   };
 
   return (
@@ -57,7 +79,7 @@ const Service = () => {
       {/* Language Selector */}
 
       <h1 className="text-center text-4xl text-white font-bold mb-8 font-playfair">{language === 'en' ? 'Why Choose PT. Salam Pesona Bahari' : 'Mengapa Memilih PT. Salam Pesona Bahari'}</h1>
-      <p className="text-center text-xl text-white mb-12">{language === 'en' ? 'We offer the following key benefits:' : 'Kami menawarkan manfaat utama berikut:'}</p>
+      <p className="text-center text-xl text-white mb-12">{language === 'en' ? 'We offer the following key benefits:' : language === 'zh' ? '我们提供以下主要优势：' : 'Kami menawarkan manfaat utama berikut:'}</p>
 
       {/* Service Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

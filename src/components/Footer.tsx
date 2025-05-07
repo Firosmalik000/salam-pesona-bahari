@@ -6,6 +6,7 @@ const Footer = () => {
   const content = {
     en: '© 2024 All rights reserved.',
     id: '© 2024 Semua hak dilindungi.',
+    zh: '© 2024 版权所有。',
   };
 
   return (

@@ -48,6 +48,27 @@ const HowWeWork = () => {
         },
       ],
     },
+    zh: {
+      title: '我们的工作流程',
+      steps: [
+        {
+          title: '计划',
+          description: '进行文件验证过程',
+        },
+        {
+          title: '面试',
+          description: '根据经验进行面试并解释工作职责',
+        },
+        {
+          title: '出发',
+          description: '按照规定安排船员出发',
+        },
+        {
+          title: '归国',
+          description: '工作合同完成后，我们会持续监控船员，直到他们返回印尼',
+        },
+      ],
+    },
   };
 
   return (

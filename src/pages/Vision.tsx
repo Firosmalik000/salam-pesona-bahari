@@ -14,6 +14,10 @@ const Vision = () => {
       title: 'Visi Kami',
       description: 'MENJADI PERUSAHAAN JASA PEREKRUTAN DAN PENEMPATAN PELAUT YANG BERKUALITAS DAN TERPERCAYA',
     },
+    zh: {
+      title: '我们的愿景',
+      description: '成为一家优质且值得信赖的船员招聘与安置服务公司',
+    },
   };
 
   return (
